@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvRatesWinService", "ConvRatesWinService\ConvRatesWinService.csproj", "{05E3A2E9-21B7-4696-97A3-304D60A9A226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoricalTicksRepository", "HistoricalTicksRepository\HistoricalTicksRepository.csproj", "{D2797613-838A-4F2B-B9F4-A256CDF4A52E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TickWriterService", "TickWriter\TickWriterService.csproj", "{8CDF4E17-DEA5-4482-96A9-3DA474EE9638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatestSymbolsClient", "LatestSymbolsClient\LatestSymbolsClient.csproj", "{B415C596-8EFC-4427-9F9E-AA0F0DEEB8C3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs-at:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ConvRatesWinService\\ConvRatesWinService.csproj
+		SccProjectName1 = ConvRatesWinService
+		SccLocalPath1 = ConvRatesWinService
+		SccProjectUniqueName2 = HistoricalTicksRepository\\HistoricalTicksRepository.csproj
+		SccProjectName2 = HistoricalTicksRepository
+		SccLocalPath2 = HistoricalTicksRepository
+		SccProjectUniqueName3 = TickWriter\\TickWriterService.csproj
+		SccProjectName3 = TickWriter
+		SccLocalPath3 = TickWriter
+		SccProjectUniqueName4 = LatestSymbolsClient\\LatestSymbolsClient.csproj
+		SccProjectName4 = LatestSymbolsClient
+		SccLocalPath4 = LatestSymbolsClient
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05E3A2E9-21B7-4696-97A3-304D60A9A226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E3A2E9-21B7-4696-97A3-304D60A9A226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E3A2E9-21B7-4696-97A3-304D60A9A226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E3A2E9-21B7-4696-97A3-304D60A9A226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2797613-838A-4F2B-B9F4-A256CDF4A52E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2797613-838A-4F2B-B9F4-A256CDF4A52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2797613-838A-4F2B-B9F4-A256CDF4A52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2797613-838A-4F2B-B9F4-A256CDF4A52E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDF4E17-DEA5-4482-96A9-3DA474EE9638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDF4E17-DEA5-4482-96A9-3DA474EE9638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDF4E17-DEA5-4482-96A9-3DA474EE9638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDF4E17-DEA5-4482-96A9-3DA474EE9638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B415C596-8EFC-4427-9F9E-AA0F0DEEB8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B415C596-8EFC-4427-9F9E-AA0F0DEEB8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B415C596-8EFC-4427-9F9E-AA0F0DEEB8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B415C596-8EFC-4427-9F9E-AA0F0DEEB8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

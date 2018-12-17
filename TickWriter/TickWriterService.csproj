@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CDF4E17-DEA5-4482-96A9-3DA474EE9638}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TickWriterService</RootNamespace>
+    <AssemblyName>TickWriterService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\3rdParty\Autofac\latest\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="clrzmq">
+      <HintPath>..\..\..\3rdParty\clrzmq\latest\clrzmq.dll</HintPath>
+    </Reference>
+    <Reference Include="ConfigurationsManager">
+      <HintPath>..\..\BOATS\ConfigurationsManager\bin\Debug\ConfigurationsManager.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\3rdParty\log4net\latest\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Markets">
+      <HintPath>..\..\BOATS\Markets\bin\Debug\Markets.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.General, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rdParty\Platform.General\latest\Platform.General.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.TCPFramework, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rdParty\Platform.TCPFramework\latest\Platform.TCPFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.TCPFramework.Serialization.Binary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rdParty\Platform.TCPFramework.Serialization.Binary\latest\Platform.TCPFramework.Serialization.Binary.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.TCPFramework.Serialization.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rdParty\Platform.TCPFramework.Serialization.Common\latest\Platform.TCPFramework.Serialization.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Tick.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rdParty\Platform.Tick.Common\latest\Platform.Tick.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WcfNotificatorServer">
+      <HintPath>..\..\BOATS\WcfNotificatorServer\bin\Debug\WcfNotificatorServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HSTickWriter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ITickWriterEvents.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\DeserializeTicks.cs" />
+    <Compile Include="ITickWriter.cs" />
+    <Compile Include="Service\PEConnector.cs" />
+    <Compile Include="Service\SaveTicks.cs" />
+    <Compile Include="TickWriter.cs" />
+    <Compile Include="Service\TickWriterEn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HistoricalTicksRepository\HistoricalTicksRepository.csproj">
+      <Project>{d2797613-838a-4f2b-b9f4-a256cdf4a52e}</Project>
+      <Name>HistoricalTicksRepository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
